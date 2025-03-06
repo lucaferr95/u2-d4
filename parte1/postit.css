@@ -1,5 +1,7 @@
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 main {
@@ -37,15 +39,14 @@ main {
 }
 .task:nth-child(-n + 4) {
   margin-bottom: 20px; /* Aumenta questo valore per aumentare lo spazio */
-  transform: rotate(-8deg), translateY(5px);
+  transform: rotate(-8deg) translateY(-15px);
 }
 .task {
   width: 110px;
   height: 130px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 0 0 5px black, /* Ombra nera per il bordo */ 0 0 10px black,
-    /* Secondo livello di ombra nera */ 0 0 15px rgb(255, 249, 249);
+
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   font-size: 14px;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.7);
@@ -54,7 +55,34 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  transform: rotate(-8deg), translateY(-5px);
+  transform: rotate(8deg) translateY(-15px);
+  position: relative;
+  overflow: hidden;
+}
+.task::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; /* Eredita il colore di sfondo del post-it */
+  clip-path: ellipse(
+    50% 70% at 50% 50%
+  ); /* Crea una forma ellittica per la curvatura */
+  z-index: -1; /* Mette l'effetto dietro al contenuto */
+}
+.task::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  background: rgba(0, 0, 0, 0.1); /* Ombra leggera */
+  border-radius: 50%; /* Forma circolare per l'ombra */
+  transform: translate(-50%, -50%) rotate(8deg); /* Centra e ruota l'ombra */
+  z-index: -2; /* Mette l'ombra dietro all'effetto di curvatura */
 }
 
 #player1 {
