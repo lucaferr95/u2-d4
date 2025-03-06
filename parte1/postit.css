@@ -1,0 +1,103 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.task h4,
+.task p {
+  margin: 0;
+}
+.task h4 {
+  font-size: 14px;
+  color: rgb(255, 192, 34);
+  font-weight: bold;
+  padding: 5px;
+}
+.task p {
+  font-size: 12px;
+}
+#taskCont {
+  margin: 100px;
+  width: 500px;
+  height: auto;
+  padding: 50px;
+  gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: gray;
+  box-shadow: 0 0 5px black, /* Ombra nera per il bordo */ 0 0 10px black,
+    /* Secondo livello di ombra nera */ 0 0 15px rgb(233, 235, 235);
+}
+.task:nth-child(-n + 4) {
+  margin-bottom: 20px; /* Aumenta questo valore per aumentare lo spazio */
+  transform: rotate(-8deg), translateY(5px);
+}
+.task {
+  width: 110px;
+  height: 130px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 5px black, /* Ombra nera per il bordo */ 0 0 10px black,
+    /* Secondo livello di ombra nera */ 0 0 15px rgb(255, 249, 249);
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: rotate(-8deg), translateY(-5px);
+}
+
+#player1 {
+  background-color: #a8e6cf;
+} /* Verde pastello */
+#player2 {
+  background-color: #ff8b94;
+} /* Rosa pastello */
+#player3 {
+  background-color: #ffd3b6;
+} /* Arancione pastello */
+#player4 {
+  background-color: #d4a5a5;
+} /* Rosso pastello */
+#player5 {
+  background-color: #b5e7a0;
+} /* Verde chiaro */
+#player6 {
+  background-color: #f7cac9;
+} /* Rosa chiaro */
+#player7 {
+  background-color: #dec2cb;
+} /* Viola chiaro */
+#player8 {
+  background-color: #f4e1d2;
+} /* Beige */
+#player1,
+#player2,
+#player3,
+#player4,
+#player5,
+#player6,
+#player7,
+#player8 {
+  transition: transform 0.25s linear;
+}
+#player1:hover,
+#player2:hover,
+#player3:hover,
+#player4:hover,
+#player5:hover,
+#player6:hover,
+#player7:hover,
+#player8:hover {
+  transform: rotate(0deg);
+}
