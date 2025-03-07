@@ -55,34 +55,9 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  transform: rotate(8deg) translateY(-15px);
+  transform: rotate(8deg) translateY(-15px) skewY(-5deg);
   position: relative;
   overflow: hidden;
-}
-.task::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit; /* Eredita il colore di sfondo del post-it */
-  clip-path: ellipse(
-    50% 70% at 50% 50%
-  ); /* Crea una forma ellittica per la curvatura */
-  z-index: -1; /* Mette l'effetto dietro al contenuto */
-}
-.task::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  height: 90%;
-  background: rgba(0, 0, 0, 0.1); /* Ombra leggera */
-  border-radius: 50%; /* Forma circolare per l'ombra */
-  transform: translate(-50%, -50%) rotate(8deg); /* Centra e ruota l'ombra */
-  z-index: -2; /* Mette l'ombra dietro all'effetto di curvatura */
 }
 
 #player1 {
